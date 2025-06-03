@@ -50,16 +50,46 @@ git clone https://github.com/parth7123/Vivvanholiday.git .
 3. Create backend .env file:
 ```bash
 cat > BACKEND/.env << EOL
+# Server Configuration
 PORT=3000
-MONGODB_URI=mongodb+srv://parth:74108520@cluster0.lh4pbsu.mongodb.net/tourdb?retryWrites=true&w=majority&appName=Cluster0
 NODE_ENV=production
+
+# MongoDB Atlas Configuration
+MONGODB_URI=mongodb+srv://parth:74108520@cluster0.lh4pbsu.mongodb.net/tourdb?retryWrites=true&w=majority&appName=Cluster0
+MONGODB_DB_NAME=tourdb
+
+# CORS Configuration
+ALLOWED_ORIGINS=https://vivaanholidays.co.in,https://www.vivaanholidays.co.in,http://localhost:5173
+
+# Admin Configuration
+ADMIN_EMAIL=vivaanholidays6@gmail.com
 EOL
 ```
 
 4. Create frontend .env file:
 ```bash
 cat > project/.env << EOL
-VITE_API_URL=https://api.vivaanholidays.co.in
+# Site Configuration
+VITE_APP_SITE_URL=https://vivaanholidays.co.in
+VITE_APP_API_URL=https://api.vivaanholidays.co.in
+
+# EmailJS Configuration
+VITE_APP_EMAILJS_SERVICE_ID=service_mnglqot
+VITE_APP_EMAILJS_ADMIN_TEMPLATE_ID=template_gy2tpsw
+VITE_APP_EMAILJS_CONTACT_TEMPLATE_ID=template_kp0pqpw
+VITE_APP_EMAILJS_PUBLIC_KEY=KZ9btcDfq7a9x6U_Q
+
+# Firebase Configuration
+VITE_APP_FIREBASE_API_KEY=AIzaSyBPV-9y4pv-gHCZefbDmuIm0N3Jg_jhFT0
+VITE_APP_FIREBASE_AUTH_DOMAIN=vivvanholidays.firebaseapp.com
+VITE_APP_FIREBASE_PROJECT_ID=vivvanholidays
+VITE_APP_FIREBASE_STORAGE_BUCKET=vivvanholidays.appspot.com
+VITE_APP_FIREBASE_MESSAGING_SENDER_ID=943331123236
+VITE_APP_FIREBASE_APP_ID=1:943331123236:web:002d53a5fc586a8c49b8b1
+VITE_APP_FIREBASE_MEASUREMENT_ID=G-S0ENT705FM
+
+# Admin Configuration
+VITE_APP_ADMIN_EMAIL=vivaanholidays6@gmail.com
 EOL
 ```
 
